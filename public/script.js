@@ -1,11 +1,11 @@
 // Business Configuration
 const config = {
-    name: "શ્રીજી પાર્ટી પ્લોટ",
-    nameEnglish: "Shreeji Party Plot",
+    name: "રતન ફાર્મ",
+    nameEnglish: "Ratan Farm",
     phone: "+919876543210",
     whatsapp: "+919876543210",
-    email: "info@shreejipartyplot.com",
-    address: "શ્રીજી પાર્ટી પ્લોટ, એસ.જી. હાઇવે, અમદાવાદ, ગુજરાત",
+    email: "info@ratanfarm.com",
+    address: "રતન ફાર્મ, એસ.જી. હાઇવે, અમદાવાદ, ગુજરાત",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.391515904005!2d72.5020!3d23.0450!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzQyLjAiTiA3MsKwMzAnMDcuMiJF!5e0!3m2!1sen!2sin!4v1614249112423!5m2!1sen!2sin",
     social: {
         instagram: "https://instagram.com/",
