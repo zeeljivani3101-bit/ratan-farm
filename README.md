@@ -18,12 +18,12 @@ To update the website with your actual Party Plot information, open `script.js` 
 
 ```javascript
 const config = {
-    name: "શ્રીજી પાર્ટી પ્લોટ",
-    nameEnglish: "Shreeji Party Plot",
-    phone: "+919876543210",
-    whatsapp: "+919876543210",
-    email: "info@shreejipartyplot.com",
-    address: "શ્રીજી પાર્ટી પ્લોટ, એસ.જી. હાઇવે, અમદાવાદ, ગુજરાત",
+    name: "રતન ફાર્મ",
+    nameEnglish: "Ratan farm",
+    phone: "+919067702502",
+    whatsapp: "+918511815615",
+    email: "ratanfarm@gmail.com",
+    address: "રતન ફાર્મ મોટા વરાછા સુરત",
     mapUrl: "YOUR_GOOGLE_MAPS_EMBED_URL",
     social: {
         instagram: "https://instagram.com/",

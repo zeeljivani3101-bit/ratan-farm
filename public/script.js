@@ -2,15 +2,14 @@
 const config = {
     name: "રતન ફાર્મ",
     nameEnglish: "Ratan Farm",
-    phone: "+919876543210",
-    whatsapp: "+919876543210",
-    email: "info@ratanfarm.com",
-    address: "રતન ફાર્મ, એસ.જી. હાઇવે, અમદાવાદ, ગુજરાત",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.391515904005!2d72.5020!3d23.0450!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzQyLjAiTiA3MsKwMzAnMDcuMiJF!5e0!3m2!1sen!2sin!4v1614249112423!5m2!1sen!2sin",
+    phone: "+91 8511815615",
+    whatsapp: "+91 7405401530",
+    email: "ratanfarm@gmail.com",
+    address: "સેરેટોન ટાવર ની બાજુ માં, ભરથાણા, ન્યૂ રિંગ રોડ, મોટા વરાછા, સુરત",
+    mapUrl: "https://maps.google.com/maps?q=Ratan+Farm+Bharthana+New+Ring+Road+Mota+Varachha+Surat&t=&z=15&ie=UTF8&iwloc=&output=embed",
     social: {
-        instagram: "https://instagram.com/",
-        facebook: "https://facebook.com/",
-        youtube: "https://youtube.com/"
+        instagram: "https://www.instagram.com/ratan_farm_?igsi=MWl4dmRtbTkzMWU4bw==",
+
     },
     stats: {
         capacity: 1500,
@@ -25,17 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".config-name").forEach(el => el.textContent = config.name);
     document.querySelectorAll(".config-phone").forEach(el => el.textContent = config.phone);
     document.querySelectorAll(".config-phone-href").forEach(el => el.href = `tel:${config.phone}`);
-    document.querySelectorAll(".config-whatsapp-href").forEach(el => el.href = `https://wa.me/${config.whatsapp.replace('+', '')}`);
+    document.querySelectorAll(".config-whatsapp-href").forEach(el => el.href = `https://wa.me/${config.whatsapp.replace(/\D/g, '')}`);
     document.querySelectorAll(".config-email").forEach(el => el.textContent = config.email);
     document.querySelectorAll(".config-email-href").forEach(el => el.href = `mailto:${config.email}`);
     document.querySelectorAll(".config-address").forEach(el => el.textContent = config.address);
     document.querySelector(".config-map").src = config.mapUrl;
-    
+
     // Social Links
     document.querySelector(".config-instagram").href = config.social.instagram;
-    document.querySelector(".config-facebook").href = config.social.facebook;
-    document.querySelector(".config-youtube").href = config.social.youtube;
-    
+
     // Stats Update (with Animation support)
     document.querySelector(".stat-capacity").dataset.target = config.stats.capacity;
     document.querySelector(".stat-parking").dataset.target = config.stats.parking;
@@ -75,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                
+
                 // Trigger counters if it's the counter section
                 if (entry.target.classList.contains('counters') && !countersStarted) {
                     startCounters();
@@ -94,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const eventType = document.getElementById('eventType').value;
@@ -103,8 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const message = document.getElementById('message').value;
 
             const waText = `નમસ્કાર, મારે બુકિંગ વિશે માહિતી જોઈએ છે.%0A%0A*નામ:* ${name}%0A*મોબાઇલ:* ${phone}%0A*પ્રસંગ:* ${eventType}%0A*તારીખ:* ${eventDate}%0A*મહેમાનોની સંખ્યા:* ${guests}%0A*વધુ માહિતી:* ${message}`;
-            
-            const waUrl = `https://wa.me/${config.whatsapp.replace('+', '')}?text=${waText}`;
+
+            const waUrl = `https://wa.me/${config.whatsapp.replace(/\D/g, '')}?text=${waText}`;
             window.open(waUrl, '_blank');
         });
     }
