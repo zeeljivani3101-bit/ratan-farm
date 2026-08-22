@@ -1,7 +1,7 @@
 :root {
   --primary-color: #0b3d2b; /* Dark Green */
   --primary-dark: #072a1e;
-  --accent-color: #8b0000; /* Maroon */
+  --accent-color: #0a4f35; /* Dark Green Accent */
   --gold-color: #d4af37; /* Premium Gold */
   --gold-light: #f3e5ab;
   --bg-color: #ffffff;
@@ -64,13 +64,15 @@ h1, h2, h3, h4, h5, h6 {
 .section-title h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
+  letter-spacing: 0.5px;
 }
 
 .section-title .divider {
   width: 80px;
   height: 3px;
-  background-color: var(--gold-color);
+  background: linear-gradient(90deg, transparent, var(--gold-color), transparent);
   margin: 0 auto;
+  border-radius: 2px;
 }
 
 /* Buttons */
@@ -402,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Booking Section */
 .booking-section {
   position: relative;
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 40%, #0d1b3e 100%);
   color: white;
   overflow: hidden;
 }
@@ -416,10 +418,88 @@ h1, h2, h3, h4, h5, h6 {
 
 .booking-card {
   background: white;
-  border-radius: var(--border-radius);
-  padding: 40px;
+  border-radius: 16px;
+  padding: 45px 40px;
   color: var(--text-dark);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  border-top: 4px solid var(--gold-color);
+  position: relative;
+}
+
+.booking-card h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.booking-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-color), var(--primary-color));
+  border-radius: 2px;
+}
+
+.booking-card .form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.booking-card .form-control,
+.booking-card .form-select {
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.booking-card .form-control:hover,
+.booking-card .form-select:hover {
+  border-color: #ccc;
+}
+
+.booking-card .form-control:focus,
+.booking-card .form-select:focus {
+  border-color: var(--gold-color);
+  background-color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.15);
+}
+
+.booking-card .btn-submit {
+  background: linear-gradient(135deg, var(--primary-color), #0a4f35);
+  color: var(--gold-light);
+  border: 2px solid var(--gold-color);
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.booking-card .btn-submit:hover {
+  background: linear-gradient(135deg, var(--gold-color), #c5a028);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.booking-card .btn-submit i {
+  margin-right: 8px;
 }
 
 .form-control:focus {

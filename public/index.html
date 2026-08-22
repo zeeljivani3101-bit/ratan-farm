@@ -142,6 +142,14 @@
                         </video>
                     </div>
                 </div>
+                <div class="col-md-6 offset-md-3">
+                    <div class="video-container">
+                        <video controls muted playsinline preload="metadata" class="farm-video">
+                            <source src="images/ratan-farm-video5.mp4#t=1" type="video/mp4">
+                            તમારું બ્રાઉઝર વીડિયો સપોર્ટ નથી કરતું.
+                        </video>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -335,8 +343,8 @@
         <div class="container position-relative z-1">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-5 mb-lg-0 animate-on-scroll text-center text-lg-start">
-                    <h2 class="display-5 fw-bold mb-4 gujarati-text">તમારા ખાસ દિવસ માટે આજે જ બુકિંગ કરો</h2>
-                    <p class="lead mb-4">Limited Dates Available – Book Your Event Today!</p>
+                    <h2 class="display-5 fw-bold mb-4 gujarati-text" style="color: #ffffff;">તમારા ખાસ દિવસ માટે આજે જ બુકિંગ કરો</h2>
+                    <p class="lead mb-4" style="color: #d4af37;">Limited Dates Available – Book Your Event Today!</p>
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
                         <a href="#" class="btn-whatsapp config-whatsapp-href text-center"><i
                                 class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
@@ -346,44 +354,45 @@
                 </div>
                 <div class="col-lg-6 offset-lg-1 animate-on-scroll">
                     <div class="booking-card">
-                        <h3 class="mb-4 text-center">Inquiry Form</h3>
+                        <h3 class="mb-4 text-center gujarati-text">📋 Inquiry Form</h3>
                         <form id="bookingForm">
                             <div class="mb-3">
-                                <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                <label for="name" class="form-label"><i class="fas fa-user me-2"></i>Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="તમારું નામ લખો" required>
                             </div>
                             <div class="mb-3">
-                                <label for="phone" class="form-label">Mobile Number</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Mobile Number" required>
+                                <label for="phone" class="form-label"><i class="fas fa-phone-alt me-2"></i>Mobile Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="મોબાઇલ નંબર" required>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="eventType" class="form-label">Event Type</label>
+                                    <label for="eventType" class="form-label"><i class="fas fa-calendar-check me-2"></i>Event Type</label>
                                     <select class="form-select" id="eventType" required>
-                                        <option value="">Select Event</option>
-                                        <option value="Wedding">Wedding</option>
-                                        <option value="Reception">Reception</option>
-                                        <option value="Engagement">Engagement</option>
+                                        <option value="">પ્રસંગ પસંદ કરો</option>
+                                        <option value="Wedding">Wedding (લગ્ન)</option>
+                                        <option value="Reception">Reception (રિસેપ્શન)</option>
+                                        <option value="Engagement">Engagement (સગાઈ)</option>
                                         <option value="Other">Other Social Event</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6 mt-3 mt-md-0">
-                                    <label for="eventDate" class="form-label">Event Date</label>
+                                    <label for="eventDate" class="form-label"><i class="fas fa-calendar-alt me-2"></i>Event Date</label>
                                     <input type="date" class="form-control" id="eventDate" required>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="guests" class="form-label">Number of Guests</label>
+                                <label for="guests" class="form-label"><i class="fas fa-users me-2"></i>Number of Guests</label>
                                 <input type="number" class="form-control" id="guests" placeholder="e.g. 500" required>
                             </div>
                             <div class="mb-4">
-                                <label for="message" class="form-label">Message (Optional)</label>
+                                <label for="message" class="form-label"><i class="fas fa-comment-dots me-2"></i>Message (Optional)</label>
                                 <textarea class="form-control" id="message" rows="3"
-                                    placeholder="Additional info..."></textarea>
+                                    placeholder="વધારાની માહિતી..."></textarea>
                             </div>
                             <div class="d-grid">
-                                <button type="submit" class="btn-primary-custom w-100">Send Booking Inquiry via
-                                    WhatsApp</button>
+                                <button type="submit" class="btn-submit w-100">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp પર Inquiry મોકલો
+                                </button>
                             </div>
                         </form>
                     </div>
