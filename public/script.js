@@ -28,15 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".config-email").forEach(el => el.textContent = config.email);
     document.querySelectorAll(".config-email-href").forEach(el => el.href = `mailto:${config.email}`);
     document.querySelectorAll(".config-address").forEach(el => el.textContent = config.address);
-    document.querySelector(".config-map").src = config.mapUrl;
+    const mapEl = document.querySelector(".config-map");
+    if (mapEl) {
+        mapEl.src = config.mapUrl;
+    }
 
     // Social Links
     document.querySelector(".config-instagram").href = config.social.instagram;
 
     // Stats Update (with Animation support)
-    document.querySelector(".stat-capacity").dataset.target = config.stats.capacity;
-    document.querySelector(".stat-parking").dataset.target = config.stats.parking;
-    document.querySelector(".stat-events").dataset.target = config.stats.events;
+    const capacityStat = document.querySelector(".stat-capacity");
+    if (capacityStat) {
+        capacityStat.dataset.target = config.stats.capacity;
+        document.querySelector(".stat-parking").dataset.target = config.stats.parking;
+        document.querySelector(".stat-events").dataset.target = config.stats.events;
+    }
 
     // Counter Animation Logic
     const counters = document.querySelectorAll('.counter-number');
@@ -71,8 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-
                 // Trigger counters if it's the counter section
                 if (entry.target.classList.contains('counters') && !countersStarted) {
                     startCounters();
@@ -82,8 +86,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.animate-on-scroll, .counters').forEach(el => {
+    document.querySelectorAll('.counters').forEach(el => {
         observer.observe(el);
+    });
+
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 50
     });
 
     // Form Submission (WhatsApp Integration)
