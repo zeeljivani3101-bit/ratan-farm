@@ -123,19 +123,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-logo {
-  max-height: 50px; /* Adjust height based on layout */
+  max-height: 70px; /* Increased size for navbar */
   width: auto;
   object-fit: contain;
-  mix-blend-mode: multiply;
-  /* Blow out the beige background to pure white so multiply blend mode hides it perfectly */
-  filter: contrast(1.3) brightness(1.1); 
 }
 
 .footer-logo {
-  max-height: 80px;
-  mix-blend-mode: screen; 
-  /* Grayscale, increase contrast massively to make the beige bg pure black when inverted, keeping the text white */
-  filter: grayscale(1) contrast(5) invert(1); 
+  max-height: 110px; /* Increased size for footer */
+  /* Make the transparent PNG's text pure white for the dark footer */
+  filter: brightness(0) invert(1); 
 }
 
 .nav-link {
