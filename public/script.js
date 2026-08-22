@@ -105,12 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
-            const eventType = document.getElementById('eventType').value;
             const eventDate = document.getElementById('eventDate').value;
             const guests = document.getElementById('guests').value;
             const message = document.getElementById('message').value;
 
-            const waText = `નમસ્કાર, મારે બુકિંગ વિશે માહિતી જોઈએ છે.%0A%0A*નામ:* ${name}%0A*મોબાઇલ:* ${phone}%0A*પ્રસંગ:* ${eventType}%0A*તારીખ:* ${eventDate}%0A*મહેમાનોની સંખ્યા:* ${guests}%0A*વધુ માહિતી:* ${message}`;
+            const waText = `નમસ્કાર, મારે બુકિંગ વિશે માહિતી જોઈએ છે.%0A%0A*નામ:* ${name}%0A*મોબાઇલ:* ${phone}%0A*તારીખ:* ${eventDate}%0A*મહેમાનોની સંખ્યા:* ${guests}%0A*વધુ માહિતી:* ${message}`;
 
             const waUrl = `https://wa.me/${config.whatsapp.replace(/\D/g, '')}?text=${waText}`;
             window.open(waUrl, '_blank');
