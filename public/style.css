@@ -572,6 +572,22 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
+/* Video Section */
+.video-container {
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--gold-color);
+}
+
+.farm-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #000;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   /* Mobile ma background image hatavi ne solid gradient rakhyo */

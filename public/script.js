@@ -12,9 +12,9 @@ const config = {
 
     },
     stats: {
-        capacity: 1500,
-        parking: 500,
-        events: 1200
+        capacity: 3000,
+        parking: 1000,
+        events: 600
     }
 };
 
