@@ -224,4 +224,49 @@ document.addEventListener("DOMContentLoaded", () => {
             window.open(waUrl, '_blank');
         });
     }
+
+    // 9. Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => {
+                    console.log('[PWA] ServiceWorker registered with scope:', reg.scope);
+                })
+                .catch(err => {
+                    console.log('[PWA] ServiceWorker registration failed:', err);
+                });
+        });
+    }
+
+    // 10. PWA Install Prompt Handler
+    let deferredPrompt;
+    const installBtns = document.querySelectorAll('.pwa-install-btn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+
+        // Show install buttons if present
+        installBtns.forEach(btn => {
+            btn.style.display = 'inline-flex';
+            btn.addEventListener('click', () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('[PWA] User accepted install prompt');
+                        }
+                        deferredPrompt = null;
+                        installBtns.forEach(b => b.style.display = 'none');
+                    });
+                }
+            });
+        });
+    });
+
+    window.addEventListener('appinstalled', () => {
+        console.log('[PWA] App successfully installed');
+        installBtns.forEach(b => b.style.display = 'none');
+        deferredPrompt = null;
+    });
 });
