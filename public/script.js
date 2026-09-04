@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Handle URL hash on load (e.g. gallery.html#dome)
         const hash = window.location.hash.replace('#', '').toLowerCase();
-        if (hash && (hash === 'dome' || hash === 'decor' || hash === 'lawn')) {
+        if (hash && (hash === 'dome' || hash === 'decor')) {
             applyFilter(hash);
         }
     }
