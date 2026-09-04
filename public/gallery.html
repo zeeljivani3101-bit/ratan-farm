@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="config-name">Party Plot</title>
+    <title class="config-name">Party Plot - Photo Gallery</title>
     <meta name="description"
-        content="તમારા દરેક ખાસ પ્રસંગ માટે એક સુંદર સ્થળ - Wedding, Reception, Engagement, and Social Events Venue.">
-    <meta name="keywords" content="Party Plot, Wedding Venue, Event Venue, Banquet, Marriage Hall">
+        content="રતન ફાર્મ ફોટો ગેલેરી - કવર્ડ એસી ડોમ બેન્ક્વેટ હોલ, વિશાળ ગ્રીન લૉન, રોયલ સ્ટેજ ડેકોરેશન અને ઇવેન્ટ ફોટોસ.">
+    <meta name="keywords" content="Party Plot, Wedding Venue, Dome Hall Photos, Event Venue Gallery, Surat Banquet">
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Party Plot | Wedding & Event Venue">
-    <meta property="og:description" content="Premium venue for your special occasions.">
+    <meta property="og:title" content="Gallery | Ratan Farm Party Plot">
+    <meta property="og:description" content="View our luxurious dome hall, grand stage decor, and lush party plot lawn.">
     <meta property="og:image" content="images/hero.jpg">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Gujarati:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Noto+Serif+Gujarati:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
         rel="stylesheet">
 
     <!-- AOS Animation CSS -->
@@ -40,11 +40,11 @@
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Ratan Farm Logo" class="site-logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -52,94 +52,197 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a href="contact.html#booking" class="btn-primary-custom">Book Your Inquiry</a>
+                        <a href="contact.html#booking" class="btn-primary-custom">
+                            <i class="fas fa-calendar-check"></i> Book Your Inquiry
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div style="padding-top: 85px;"></div>
 
-    <div style="padding-top: 80px;"></div>
     <!-- Gallery Section -->
     <section id="gallery" class="section-padding gallery-section">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
-                <h2>Our Gallery</h2>
-                <div class="divider"></div>
+                <div class="luxury-badge luxury-badge-dark">
+                    <i class="fas fa-camera-retro"></i> Visual Showcase
+                </div>
+                <h2>અમારી ફોટો ગેલેરી (Photo Gallery)</h2>
+                <p class="gujarati-text">અમારા ફાર્મ ના ભવ્ય કવર્ડ ડોમ હોલ, આકર્ષક ડેકોરેશન અને વિશાળ ગ્રીન લૉનની એક ઝલક</p>
+                <div class="divider">
+                    <span class="divider-icon">◆</span>
+                </div>
             </div>
-            <div class="row g-4 justify-content-center">
+
+            <!-- Category Filter Tabs -->
+            <div class="gallery-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-border-all me-1"></i> બધા (All Photos)
+                </button>
+                <button class="filter-btn" data-filter="dome">
+                    <i class="fas fa-landmark me-1"></i> ડોમ બેન્ક્વેટ હોલ (Dome Hall)
+                </button>
+                <button class="filter-btn" data-filter="decor">
+                    <i class="fas fa-paint-brush me-1"></i> સ્ટેજ અને ડેકોરેશન (Decor & Stage)
+                </button>
+                <button class="filter-btn" data-filter="lawn">
+                    <i class="fas fa-tree me-1"></i> ગ્રાન્ડ લૉન અને પરિસર (Lawn & Venue)
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4 justify-content-center" id="galleryGrid">
+                
                 <!-- Dome Hall Photos -->
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="dome" data-aos="zoom-in" data-aos-delay="100">
                     <div class="gallery-item">
                         <img src="images/dome-hall-1.jpg" alt="Covered Dome Banquet Hall - Stage View">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">ડોમ હોલ - સ્ટેજ વ્યુ</div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="dome" data-aos="zoom-in" data-aos-delay="150">
                     <div class="gallery-item">
                         <img src="images/dome-hall-2.jpg" alt="Covered Dome Banquet Hall - Sofa & Royal Seating">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">ડોમ હોલ - રોયલ સોફા બેઠક</div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="dome" data-aos="zoom-in" data-aos-delay="200">
                     <div class="gallery-item">
                         <img src="images/dome-hall-3.jpg" alt="Covered Dome Banquet Hall - Wide View">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">ડોમ હોલ - ભવ્ય વાઇડ વ્યુ</div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Dome & Venue Posters -->
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="250">
+                <!-- Dome Posters -->
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="dome" data-aos="zoom-in" data-aos-delay="250">
                     <div class="gallery-item">
                         <img src="images/dome-poster-monsoon.jpg" alt="Monsoon Season Covered Dome Hall Special Poster">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="gallery-item">
-                        <img src="images/dome-poster-royal.jpg" alt="Ratan Farm Premium Royal Wedding Venue Poster">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">મોનસૂન એસી ડોમ સુવિધા</div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Lawn & Decor Photos -->
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="350">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="dome" data-aos="zoom-in" data-aos-delay="300">
                     <div class="gallery-item">
-                        <img src="images/hero.jpg" alt="Ratan Farm Grand Entrance">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <img src="images/dome-poster-royal.jpg" alt="Ratan Farm Premium Royal Wedding Venue Poster">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">શાહી રોયલ વેડિંગ હોલ</div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+
+                <!-- Stage & Decor Photos -->
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="decor" data-aos="zoom-in" data-aos-delay="350">
                     <div class="gallery-item">
-                        <img src="images/stage.jpg" alt="Stage Decoration">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <img src="images/stage.jpg" alt="Stage Decoration & Floral Setup">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">રોયલ સ્ટેજ ડેકોરેશન</div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="decor" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="gallery-item">
+                        <img src="images/gallery/stage.jpg" alt="Night Stage Lighting & Ambience">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">નાઈટ ડેકોરેશન અને લાઇટિંગ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="decor" data-aos="zoom-in" data-aos-delay="450">
+                    <div class="gallery-item">
+                        <img src="images/gallery/dining.jpg" alt="Dining and Banquet Seating Arrangement">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">ડાઇનિંગ એરિયા અરેન્જમેન્ટ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lawn & Venue Photos -->
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="lawn" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="gallery-item">
+                        <img src="images/hero.jpg" alt="Ratan Farm Grand Entrance & Lawn">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">ભવ્ય એન્ટ્રન્સ અને ઓપન લૉન</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper" data-category="lawn" data-aos="zoom-in" data-aos-delay="550">
+                    <div class="gallery-item">
+                        <img src="images/gallery/venue.jpg" alt="Ratan Farm Venue Overview">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="gallery-overlay-text">ફાર્મ પરિસર ઓવરવ્યુ</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img src="" alt="Gallery Full" id="lightbox-img">
+        <div class="lightbox-content-box">
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="Gallery Full Size View" id="lightbox-img">
+        </div>
     </div>
+
+    <!-- Booking CTA Banner -->
+    <section class="booking-section section-padding">
+        <div class="container position-relative z-1 text-center" data-aos="fade-up">
+            <h2 class="display-6 fw-bold text-white mb-3 gujarati-text">શું તમને અમારું સ્થળ પસંદ આવ્યું?</h2>
+            <p class="lead text-warning mb-4" style="color: var(--gold-light) !important;">આજે જ રૂબરૂ મુલાકાત માટે સમય નક્કી કરો અથવા માહિતી મેળવો</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="contact.html#booking" class="btn-gold">
+                    <i class="fas fa-calendar-alt"></i> Book Your Inquiry
+                </a>
+                <a href="#" class="btn-whatsapp config-whatsapp-href" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp પર વાત કરો
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <img src="images/logo.png" alt="Ratan Farm Logo" class="site-logo mb-3 footer-logo">
-                    <p class="gujarati-text mb-4">તમારા દરેક ખાસ પ્રસંગ માટે એક સુંદર સ્થળ.</p>
+                    <p class="gujarati-text mb-4 text-light">તમારા દરેક ખાસ પ્રસંગ માટે એક સુંદર અને યાદગાર સ્થળ.</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/ratan_farm_?igsi=MWl4dmRtbTkzMWU4bw=="
-                            class="config-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            class="config-instagram" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
@@ -149,17 +252,23 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="facilities.html">Facilities</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
                     <h4>Reach Us</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt me-2 text-warning"></i> <span
-                                class="config-address">Address</span></li>
-                        <li><i class="fas fa-phone-alt me-2 text-warning"></i> <span class="config-phone">Phone</span>
+                        <li>
+                            <i class="fas fa-map-marker-alt me-2" style="color: var(--gold-color);"></i>
+                            <span class="config-address">Address</span>
                         </li>
-                        <li><i class="fas fa-envelope me-2 text-warning"></i> <span class="config-email">Email</span>
+                        <li>
+                            <i class="fas fa-phone-alt me-2" style="color: var(--gold-color);"></i>
+                            <span class="config-phone">Phone</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope me-2" style="color: var(--gold-color);"></i>
+                            <span class="config-email">Email</span>
                         </li>
                     </ul>
                 </div>
@@ -172,9 +281,12 @@
 
     <!-- Floating Buttons -->
     <div class="floating-btns">
-        <a href="#" class="float-btn float-call config-phone-href"><i class="fas fa-phone-alt"></i></a>
-        <a href="#" class="float-btn float-whatsapp config-whatsapp-href" target="_blank"><i
-                class="fab fa-whatsapp"></i></a>
+        <a href="#" class="float-btn float-call config-phone-href" aria-label="Call Now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="#" class="float-btn float-whatsapp config-whatsapp-href" target="_blank" aria-label="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <!-- Scripts -->

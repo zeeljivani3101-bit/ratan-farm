@@ -15,11 +15,11 @@
     <meta property="og:image" content="images/hero.jpg">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Gujarati:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Noto+Serif+Gujarati:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
         rel="stylesheet">
 
     <!-- AOS Animation CSS -->
@@ -40,23 +40,24 @@
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Ratan Farm Logo" class="site-logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a href="contact.html#booking" class="btn-primary-custom">Book Your Inquiry</a>
+                        <a href="contact.html#booking" class="btn-primary-custom">
+                            <i class="fas fa-calendar-check"></i> Book Your Inquiry
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -66,16 +67,26 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
-        <div class="container hero-content" data-aos="zoom-in" data-aos-duration="1500">
-            <h1 class="config-name">Party Plot</h1>
-            <p class="subtitle-guj">તમારા ખાસ પ્રસંગોને બનાવો યાદગાર</p>
-            <p class="events-list">Wedding • Engagement • Reception • Social Events</p>
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="contact.html#booking" class="btn-primary-custom">Book Your Inquiry</a>
-                <a href="#" class="btn-primary-custom config-phone-href"><i class="fas fa-phone-alt me-2"></i>Call
-                    Now</a>
-                <a href="#" class="btn-whatsapp config-whatsapp-href" target="_blank"><i
-                        class="fab fa-whatsapp me-2"></i>WhatsApp</a>
+        <div class="container hero-content" data-aos="zoom-in" data-aos-duration="1200">
+            <div class="luxury-badge">
+                <i class="fas fa-crown"></i>
+                <span>સુરતનું સૌથી ભવ્ય અને લક્ઝરી વેડિંગ ડેસ્ટિનેશન</span>
+            </div>
+            <h1>
+                <span class="gold-title config-name">Party Plot</span>
+            </h1>
+            <p class="subtitle-guj">તમારા ખાસ પ્રસંગોને બનાવો અવિસ્મરણીય અને શાહી</p>
+            <p class="events-list">Royal Weddings • Grand Reception • Engagement • Corporate & Social Events</p>
+            <div class="hero-btn-group">
+                <a href="contact.html#booking" class="btn-gold">
+                    <i class="fas fa-calendar-alt"></i> Book Your Inquiry
+                </a>
+                <a href="#" class="btn-primary-custom config-phone-href">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+                <a href="#" class="btn-whatsapp config-whatsapp-href" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -83,19 +94,114 @@
     <!-- Why Choose Us / Counters -->
     <section class="counters">
         <div class="container">
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-4 counter-item">
-                    <div class="counter-number stat-capacity" data-target="0">0</div>
-                    <div class="counter-text">Guests Capacity</div>
+            <div class="row g-4" data-aos="fade-up">
+                <div class="col-md-4">
+                    <div class="counter-card">
+                        <div class="counter-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="counter-number stat-capacity" data-target="0">0</div>
+                        <div class="counter-text">Guests Capacity (મહેમાનોની ક્ષમતા)</div>
+                    </div>
                 </div>
-                <div class="col-md-4 counter-item">
-                    <div class="counter-number stat-parking" data-target="0">0</div>
-                    <div class="counter-text">Car Parking Space</div>
+                <div class="col-md-4">
+                    <div class="counter-card">
+                        <div class="counter-icon">
+                            <i class="fas fa-parking"></i>
+                        </div>
+                        <div class="counter-number stat-parking" data-target="0">0</div>
+                        <div class="counter-text">Car Parking Space (વિશાળ પાર્કિંગ)</div>
+                    </div>
                 </div>
-                <div class="col-md-4 counter-item">
-                    <div class="counter-number stat-events" data-target="0">0</div>
-                    <div class="counter-text">Successful Events</div>
+                <div class="col-md-4">
+                    <div class="counter-card">
+                        <div class="counter-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <div class="counter-number stat-events" data-target="0">0</div>
+                        <div class="counter-text">Successful Events (સફળ ઇવેન્ટ્સ)</div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Venues / Experience Showcase -->
+    <section class="section-padding" style="background-color: var(--bg-color);">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <div class="luxury-badge luxury-badge-dark">
+                    <i class="fas fa-gem"></i> Premium Venues & Facilities
+                </div>
+                <h2>અમારા ખાસ આકર્ષણો</h2>
+                <p class="gujarati-text">મોનસૂન પ્રૂફ એસી કવર્ડ ડોમ હોલ અને વિશાળ ગ્રીન લૉન સાથે તમારા દરેક ઉત્સવ માટે શ્રેષ્ઠ વાતાવરણ</p>
+                <div class="divider">
+                    <span class="divider-icon">◆</span>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-card">
+                        <div class="event-img-wrapper">
+                            <img src="images/dome-hall-1.jpg" alt="Covered AC Dome Banquet Hall" class="event-img">
+                        </div>
+                        <div class="event-overlay">
+                            <h3>કવર્ડ ડોમ હોલ</h3>
+                            <p class="gujarati-text">વરસાદ કે ગરમીમાં પણ ચિંતામુક્ત ભવ્ય ઇવેન્ટ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card">
+                        <div class="event-img-wrapper">
+                            <img src="images/hero.jpg" alt="Lush Green Open Lawn" class="event-img">
+                        </div>
+                        <div class="event-overlay">
+                            <h3>વિશાળ ગ્રીન લૉન</h3>
+                            <p class="gujarati-text">ખુલ્લા આકાશ નીચે કુદરતી અને ભવ્ય વાતાવરણ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="event-card">
+                        <div class="event-img-wrapper">
+                            <img src="images/stage.jpg" alt="Royal Wedding Stage Setup" class="event-img">
+                        </div>
+                        <div class="event-overlay">
+                            <h3>શાહી સ્ટેજ ડેકોરેશન</h3>
+                            <p class="gujarati-text">આકર્ષક લાઇટિંગ અને રોયલ થીમ આધારિત સેટઅપ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="gallery.html" class="btn-primary-custom me-sm-3 mb-2 mb-sm-0">
+                    <i class="fas fa-images"></i> View Full Gallery
+                </a>
+                <a href="facilities.html" class="btn-outline-gold">
+                    <i class="fas fa-star"></i> Explore All Facilities
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action Booking Strip -->
+    <section class="booking-section section-padding">
+        <div class="container position-relative z-1 text-center" data-aos="zoom-in">
+            <div class="luxury-badge mb-3">
+                <i class="fas fa-star"></i> Book In Advance
+            </div>
+            <h2 class="display-6 fw-bold text-white mb-3 gujarati-text">તમારા શુભ પ્રસંગ માટે તારીખ અત્યારે જ બુક કરાવો</h2>
+            <p class="lead text-warning mb-4" style="color: var(--gold-light) !important;">લિમિટેડ ડેટ્સ ઉપલબ્ધ – ઉત્તમ સુવિધા અને વાજબી દરે બુકિંગ ચાલુ છે</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="contact.html#booking" class="btn-gold">
+                    <i class="fas fa-edit"></i> Inquiry Form ભરો
+                </a>
+                <a href="#" class="btn-whatsapp config-whatsapp-href" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp પર વાત કરો
+                </a>
             </div>
         </div>
     </section>
@@ -103,13 +209,15 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <img src="images/logo.png" alt="Ratan Farm Logo" class="site-logo mb-3 footer-logo">
-                    <p class="gujarati-text mb-4">તમારા દરેક ખાસ પ્રસંગ માટે એક સુંદર સ્થળ.</p>
+                    <p class="gujarati-text mb-4 text-light">તમારા દરેક ખાસ પ્રસંગ માટે સુરતનું અતિ સુંદર, સુવિધાસભર અને શાહી સ્થળ.</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/ratan_farm_?igsi=MWl4dmRtbTkzMWU4bw=="
-                            class="config-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            class="config-instagram" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
@@ -119,32 +227,41 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="facilities.html">Facilities</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
                     <h4>Reach Us</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt me-2 text-warning"></i> <span
-                                class="config-address">Address</span></li>
-                        <li><i class="fas fa-phone-alt me-2 text-warning"></i> <span class="config-phone">Phone</span>
+                        <li>
+                            <i class="fas fa-map-marker-alt me-2" style="color: var(--gold-color);"></i>
+                            <span class="config-address">Address</span>
                         </li>
-                        <li><i class="fas fa-envelope me-2 text-warning"></i> <span class="config-email">Email</span>
+                        <li>
+                            <i class="fas fa-phone-alt me-2" style="color: var(--gold-color);"></i>
+                            <span class="config-phone">Phone</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope me-2" style="color: var(--gold-color);"></i>
+                            <span class="config-email">Email</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="mb-0">© 2026 <span class="config-name">Ratan Farm</span>. All Rights Reserved.</p>
+                <p class="mb-0">© 2026 <span class="config-name">Ratan Farm</span>. All Rights Reserved. Crafted with Royal Elegance.</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating Buttons -->
     <div class="floating-btns">
-        <a href="#" class="float-btn float-call config-phone-href"><i class="fas fa-phone-alt"></i></a>
-        <a href="#" class="float-btn float-whatsapp config-whatsapp-href" target="_blank"><i
-                class="fab fa-whatsapp"></i></a>
+        <a href="#" class="float-btn float-call config-phone-href" aria-label="Call Now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="#" class="float-btn float-whatsapp config-whatsapp-href" target="_blank" aria-label="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <!-- Scripts -->

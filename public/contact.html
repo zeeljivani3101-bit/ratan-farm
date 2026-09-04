@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="config-name">Party Plot</title>
+    <title class="config-name">Party Plot - Contact & Booking</title>
     <meta name="description"
-        content="તમારા દરેક ખાસ પ્રસંગ માટે એક સુંદર સ્થળ - Wedding, Reception, Engagement, and Social Events Venue.">
-    <meta name="keywords" content="Party Plot, Wedding Venue, Event Venue, Banquet, Marriage Hall">
+        content="રતન ફાર્મ સુરત - બુકિંગ ઇન્ક્વાયરી, લોકેશન મેપ અને સંપર્ક નંબર. તમારા લગ્ન કે ઇવેન્ટ માટે આજે જ સંપર્ક કરો.">
+    <meta name="keywords" content="Party Plot Booking, Wedding Venue Contact, Surat Party Plot Phone, Ratan Farm Location">
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Party Plot | Wedding & Event Venue">
-    <meta property="og:description" content="Premium venue for your special occasions.">
+    <meta property="og:title" content="Contact & Inquiry | Ratan Farm Party Plot">
+    <meta property="og:description" content="Get in touch for venue visits, date availability, and event bookings.">
     <meta property="og:image" content="images/hero.jpg">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Gujarati:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Noto+Serif+Gujarati:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
         rel="stylesheet">
 
     <!-- AOS Animation CSS -->
@@ -40,11 +40,11 @@
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Ratan Farm Logo" class="site-logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -52,68 +52,82 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a href="contact.html#booking" class="btn-primary-custom">Book Your Inquiry</a>
+                        <a href="contact.html#booking" class="btn-primary-custom">
+                            <i class="fas fa-calendar-check"></i> Book Your Inquiry
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div style="padding-top: 85px;"></div>
 
-    <div style="padding-top: 80px;"></div>
     <!-- Booking CTA & Form Section -->
     <section id="booking" class="section-padding booking-section">
         <div class="container position-relative z-1">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-5 mb-lg-0 text-center text-lg-start" data-aos="fade-right">
-                    <h2 class="display-5 fw-bold mb-4 gujarati-text" style="color: #ffffff;">તમારા ખાસ દિવસ માટે આજે જ
-                        બુકિંગ કરો</h2>
-                    <p class="lead mb-4" style="color: #d4af37;">Limited Dates Available – Book Your Event Today!</p>
+                    <div class="luxury-badge">
+                        <i class="fas fa-crown"></i> Reserve Your Date
+                    </div>
+                    <h2 class="display-6 fw-bold mb-4 gujarati-text text-white">
+                        તમારા ખાસ દિવસ માટે આજે જ બુકિંગ કરાવો
+                    </h2>
+                    <p class="lead mb-4" style="color: var(--gold-light);">
+                        Limited Dates Available – લગ્ન, રિસેપ્શન અને માંગલિક પ્રસંગો માટે અત્યારે જ સંપર્ક કરો!
+                    </p>
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-                        <a href="#" class="btn-whatsapp config-whatsapp-href text-center"><i
-                                class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
-                        <a href="#" class="btn btn-outline-light rounded-pill px-4 py-2 config-phone-href"><i
-                                class="fas fa-phone-alt me-2"></i>Call Now</a>
+                        <a href="#" class="btn-whatsapp config-whatsapp-href text-center" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i> WhatsApp Now
+                        </a>
+                        <a href="#" class="btn-outline-gold text-center config-phone-href">
+                            <i class="fas fa-phone-alt me-2"></i> Direct Call
+                        </a>
                     </div>
                 </div>
+
                 <div class="col-lg-6 offset-lg-1" data-aos="fade-left">
                     <div class="booking-card">
-                        <h3 class="mb-4 text-center gujarati-text">📋 Inquiry Form</h3>
+                        <h3 class="gujarati-text">📋 Inquiry & Booking Form</h3>
                         <form id="bookingForm">
                             <div class="mb-3">
-                                <label for="name" class="form-label"><i class="fas fa-user me-2"></i>Full Name</label>
+                                <label for="name" class="form-label">
+                                    <i class="fas fa-user"></i> પૂરું નામ (Full Name)
+                                </label>
                                 <input type="text" class="form-control" id="name" placeholder="તમારું નામ લખો" required>
                             </div>
                             <div class="mb-3">
-                                <label for="phone" class="form-label"><i class="fas fa-phone-alt me-2"></i>Mobile
-                                    Number</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="મોબાઇલ નંબર" required>
+                                <label for="phone" class="form-label">
+                                    <i class="fas fa-phone-alt"></i> મોબાઇલ નંબર (Mobile Number)
+                                </label>
+                                <input type="tel" class="form-control" id="phone" placeholder="10 આંકડાનો મોબાઇલ નંબર" required>
                             </div>
                             <div class="mb-3">
-                                <label for="eventDate" class="form-label"><i class="fas fa-calendar-alt me-2"></i>Event
-                                    Date</label>
+                                <label for="eventDate" class="form-label">
+                                    <i class="fas fa-calendar-alt"></i> પ્રસંગની તારીખ (Event Date)
+                                </label>
                                 <input type="date" class="form-control" id="eventDate" required>
                             </div>
                             <div class="mb-3">
-                                <label for="guests" class="form-label"><i class="fas fa-users me-2"></i>Number of
-                                    Guests</label>
-                                <input type="number" class="form-control" id="guests" placeholder="e.g. 500" required>
+                                <label for="guests" class="form-label">
+                                    <i class="fas fa-users"></i> મહેમાનોની અંદાજિત સંખ્યા (Guests Count)
+                                </label>
+                                <input type="number" class="form-control" id="guests" placeholder="દા.ત. 500 કે 1000" required>
                             </div>
                             <div class="mb-4">
-                                <label for="message" class="form-label"><i class="fas fa-comment-dots me-2"></i>Message
-                                    (Optional)</label>
+                                <label for="message" class="form-label">
+                                    <i class="fas fa-comment-dots"></i> વધારાની વિગતો / સંદેશ (Message)
+                                </label>
                                 <textarea class="form-control" id="message" rows="3"
-                                    placeholder="વધારાની માહિતી..."></textarea>
+                                    placeholder="પ્રસંગનો પ્રકાર (લગ્ન, સગાઈ, રિસેપ્શન) અથવા અન્ય જરૂરિયાત..."></textarea>
                             </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn-submit w-100">
-                                    <i class="fab fa-whatsapp"></i> WhatsApp પર Inquiry મોકલો
-                                </button>
-                            </div>
+                            <button type="submit" class="btn-submit">
+                                <i class="fab fa-whatsapp"></i> WhatsApp પર તાત્કાલિક મોકલો
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -121,53 +135,63 @@
         </div>
     </section>
 
-    <!-- Location & Contact Section -->
-    <section id="contact" class="section-padding">
+    <!-- Location & Contact Details Section -->
+    <section id="contact" class="section-padding" style="background-color: var(--bg-color);">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
-                <h2>Contact & Location</h2>
-                <div class="divider"></div>
+                <div class="luxury-badge luxury-badge-dark">
+                    <i class="fas fa-map-marked-alt"></i> Easy To Reach
+                </div>
+                <h2>સંપર્ક અને સ્થળ (Contact & Location)</h2>
+                <p class="gujarati-text">મોટા વરાછા ન્યૂ રિંગ રોડ પર સુરતનું સૌથી અનુકૂળ અને સુગમ લોકેશન</p>
+                <div class="divider">
+                    <span class="divider-icon">◆</span>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
-                    <h3 class="config-name mb-4 text-primary">Ratan Farm</h3>
 
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-info">
-                            <h4>Address</h4>
-                            <p class="config-address">Address</p>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="contact-card">
+                        <h3 class="config-name mb-4" style="color: var(--primary-color);">રતન ફાર્મ</h3>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-info">
+                                <h4>સરનામું (Address)</h4>
+                                <p class="config-address">સેરેટોન ટાવર ની બાજુ માં, ભરથાણા, ન્યૂ રિંગ રોડ, મોટા વરાછા, સુરત</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="contact-info">
-                            <h4>Call Us</h4>
-                            <p class="config-phone">+91 0000000000</p>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-info">
+                                <h4>ફોન નંબર (Call Us)</h4>
+                                <p><a href="#" class="config-phone-href config-phone">+91 8511815615</a></p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                        <div class="contact-info">
-                            <h4>WhatsApp</h4>
-                            <p class="config-phone">+91 0000000000</p>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="contact-info">
+                                <h4>વોટ્સએપ (WhatsApp)</h4>
+                                <p><a href="#" class="config-whatsapp-href config-whatsapp" target="_blank">+91 7405401530</a></p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-info">
-                            <h4>Email</h4>
-                            <p class="config-email">info@example.com</p>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-info">
+                                <h4>ઇમેઇલ (Email)</h4>
+                                <p><a href="#" class="config-email-href config-email">ratanfarm@gmail.com</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8" data-aos="fade-left">
+
+                <div class="col-lg-7" data-aos="fade-left">
                     <div class="map-container">
                         <iframe class="config-map" src="" width="100%" height="100%" style="border:0;"
-                            allowfullscreen="" loading="lazy"></iframe>
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ratan Farm Location Map"></iframe>
                     </div>
                 </div>
             </div>
@@ -177,13 +201,15 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <img src="images/logo.png" alt="Ratan Farm Logo" class="site-logo mb-3 footer-logo">
-                    <p class="gujarati-text mb-4">તમારા દરેક ખાસ પ્રસંગ માટે એક સુંદર સ્થળ.</p>
+                    <p class="gujarati-text mb-4 text-light">તમારા દરેક ખાસ પ્રસંગ માટે સુરતનું અતિ સુંદર, સુવિધાસભર અને શાહી સ્થળ.</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/ratan_farm_?igsi=MWl4dmRtbTkzMWU4bw=="
-                            class="config-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            class="config-instagram" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
@@ -193,17 +219,23 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="facilities.html">Facilities</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
                     <h4>Reach Us</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt me-2 text-warning"></i> <span
-                                class="config-address">Address</span></li>
-                        <li><i class="fas fa-phone-alt me-2 text-warning"></i> <span class="config-phone">Phone</span>
+                        <li>
+                            <i class="fas fa-map-marker-alt me-2" style="color: var(--gold-color);"></i>
+                            <span class="config-address">Address</span>
                         </li>
-                        <li><i class="fas fa-envelope me-2 text-warning"></i> <span class="config-email">Email</span>
+                        <li>
+                            <i class="fas fa-phone-alt me-2" style="color: var(--gold-color);"></i>
+                            <span class="config-phone">Phone</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope me-2" style="color: var(--gold-color);"></i>
+                            <span class="config-email">Email</span>
                         </li>
                     </ul>
                 </div>
@@ -216,9 +248,12 @@
 
     <!-- Floating Buttons -->
     <div class="floating-btns">
-        <a href="#" class="float-btn float-call config-phone-href"><i class="fas fa-phone-alt"></i></a>
-        <a href="#" class="float-btn float-whatsapp config-whatsapp-href" target="_blank"><i
-                class="fab fa-whatsapp"></i></a>
+        <a href="#" class="float-btn float-call config-phone-href" aria-label="Call Now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="#" class="float-btn float-whatsapp config-whatsapp-href" target="_blank" aria-label="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <!-- Scripts -->
