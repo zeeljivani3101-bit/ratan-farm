@@ -117,31 +117,45 @@ document.addEventListener("DOMContentLoaded", () => {
     const galleryItems = document.querySelectorAll('.gallery-item-wrapper');
 
     if (filterButtons.length > 0 && galleryItems.length > 0) {
+        const applyFilter = (filterValue) => {
+            filterButtons.forEach(b => {
+                if (b.getAttribute('data-filter') === filterValue) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
+                }
+            });
+
+            galleryItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                if (filterValue === 'all' || itemCategory === filterValue) {
+                    item.style.display = 'block';
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                } else {
+                    item.style.display = 'none';
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                }
+            });
+
+            if (typeof AOS !== 'undefined') {
+                AOS.refresh();
+            }
+        };
+
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                filterButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
                 const filterValue = btn.getAttribute('data-filter');
-
-                galleryItems.forEach(item => {
-                    const itemCategory = item.getAttribute('data-category');
-                    if (filterValue === 'all' || itemCategory === filterValue) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.95)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 250);
-                    }
-                });
+                applyFilter(filterValue);
             });
         });
+
+        // Handle URL hash on load (e.g. gallery.html#dome)
+        const hash = window.location.hash.replace('#', '').toLowerCase();
+        if (hash && (hash === 'dome' || hash === 'decor' || hash === 'lawn')) {
+            applyFilter(hash);
+        }
     }
 
     // 6. Lightbox Functionality
