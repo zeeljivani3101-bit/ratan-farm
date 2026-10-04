@@ -200,10 +200,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 8. Booking Form (WhatsApp Integration)
+    // 8. Booking Form (WhatsApp Integration & Firebase Database)
     const bookingForm = document.getElementById('bookingForm');
     if (bookingForm) {
-        bookingForm.addEventListener('submit', (e) => {
+        bookingForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const nameEl = document.getElementById('name');
@@ -218,6 +218,48 @@ document.addEventListener("DOMContentLoaded", () => {
             const guests = guestsEl ? guestsEl.value : "";
             const message = messageEl ? messageEl.value.trim() : "";
 
+            const submitBtn = bookingForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.innerText : "Submit";
+            if (submitBtn) submitBtn.innerText = "Please wait...";
+
+            try {
+                // Dynamically import Firebase to keep HTML files untouched
+                const { initializeApp, getApps, getApp } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+                const { getFirestore, collection, addDoc } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+
+                // TODO: Replace with your Firebase Project Configuration
+                const firebaseConfig = {
+                    apiKey: "YOUR_API_KEY",
+                    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+                    projectId: "YOUR_PROJECT_ID",
+                    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+                    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+                    appId: "YOUR_APP_ID"
+                };
+
+                // Initialize Firebase only once
+                const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+                const db = getFirestore(app);
+
+                // Add to Firestore database
+                await addDoc(collection(db, "bookings"), {
+                    name,
+                    phone,
+                    eventDate,
+                    guests,
+                    message,
+                    timestamp: new Date()
+                });
+                
+                console.log("Data saved to Firebase successfully!");
+            } catch (error) {
+                console.error("Firebase error: ", error);
+                alert("Please add your actual Firebase configuration in script.js to save to database. Redirecting to WhatsApp...");
+            } finally {
+                if (submitBtn) submitBtn.innerText = originalBtnText;
+            }
+
+            // After attempting database save, open WhatsApp
             const waText = `નમસ્કાર રતન ફાર્મ,%0A%0Aમારે પ્રસંગ માટે બુકિંગ વિશે વિગતવાર માહિતી જોઈએ છે:%0A%0A*નામ:* ${encodeURIComponent(name)}%0A*મોબાઇલ:* ${encodeURIComponent(phone)}%0A*તારીખ:* ${encodeURIComponent(eventDate)}%0A*મહેમાનોની સંખ્યા:* ${encodeURIComponent(guests)}%0A*સંદેશ / જરૂરિયાત:* ${encodeURIComponent(message || "કોઈ વધારાનો સંદેશ નથી")}%0A%0Aકૃપા કરીને ઉપલબ્ધતા અને વિગતો જણાવશો. આભાર!`;
 
             const waUrl = `https://wa.me/${config.whatsapp.replace(/\D/g, '')}?text=${waText}`;

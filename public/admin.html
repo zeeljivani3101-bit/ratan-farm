@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Ratan Farm</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .admin-container h2 {
+            text-align: center;
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .submit-btn {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simple Navbar for Admin -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">રતન ફાર્મ <span>(Admin)</span></a>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <h2>નવી પોસ્ટ ઉમેરો (Add New Post)</h2>
+        
+        <form id="adminPostForm">
+            <div class="form-group">
+                <label for="postTitle">પોસ્ટનું શીર્ષક (Title)</label>
+                <input type="text" id="postTitle" required placeholder="દા.ત. નવરાત્રી સ્પેશિયલ ઓફર">
+            </div>
+            
+            <div class="form-group">
+                <label for="postImage">ફોટો URL (Image Link - મરજીયાત)</label>
+                <input type="text" id="postImage" placeholder="https://example.com/image.jpg">
+            </div>
+
+            <div class="form-group">
+                <label for="postContent">પોસ્ટની વિગત (Content)</label>
+                <textarea id="postContent" rows="5" required placeholder="અહીં તમારી પોસ્ટ વિશે લખો..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">પોસ્ટ પબ્લિશ કરો</button>
+        </form>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
